@@ -21,6 +21,7 @@ MAX_CAPTCHA = 4
 char_set = number
 CHAR_SET_LEN = len(char_set)  #10
 model_path = "model/"
+URL_PATH = "http://XXXXXXXXXXXXX/jsxsd/"
  
  
 X = tf.placeholder(tf.float32, [None, IMAGE_HEIGHT * IMAGE_WIDTH])
@@ -113,8 +114,8 @@ if __name__ == '__main__':
                 IP = socket.inet_ntoa(struct.pack('>I', random.randint(1, 0xffffffff)))
                 headers['X-FORWARDED-FOR'] = IP
                 headers['CLIENT-IP'] = IP
-                req = session.get("http://219.218.128.228/jsxsd/",headers = headers)
-                req = session.get("http://219.218.128.228/jsxsd/verifycode.servlet",headers = headers)
+                req = session.get(URL_PATH,headers = headers)
+                req = session.get(URL_PATH + "verifycode.servlet",headers = headers)
                 img = cvt.run(req.content)
                 cv2.imwrite("vvvv.jpg",img)
 
@@ -135,7 +136,7 @@ if __name__ == '__main__':
                     "encoded": "MjAyMDE2MTIyMzU=%%%MjAyMDE2MTIyMzU=",
                     "RANDOMCODE": predict_text
                 }
-                req = session.post("http://219.218.128.228/jsxsd/xk/LoginToXk",data=params,headers = headers)
+                req = session.post(URL_PATH + "xk/LoginToXk",data=params,headers = headers)
                 if not re.search("验证码错误", req.text) :
                     print("Load",acceptCount,count,acceptCount/count)
                     acceptCount += 1
