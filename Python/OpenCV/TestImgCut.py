@@ -138,7 +138,7 @@ def cutting_img(im,im_position,xoffset = 1,yoffset = 1):
 
 def main():
     cvt = Convert()
-    req = requests.get("http://xxxxxxxxxxxxx/verifycode.servlet")
+    req = requests.get("http://xxxxxxxxxxxxxxx/verifycode.servlet")
     img = cvt.run(req.content)
     cv2.imwrite("v.jpg",img)
 
@@ -173,7 +173,7 @@ def main():
     #       template = imgArr[i]
     #       tempResult=""
     #       matchingDegree=0.0
-    #       filedirWarehouse = '../../Warehouse/StrIntell'
+    #       filedirWarehouse = '../../Warehouse/StrIntell/'
     #       for fileImg in os.listdir(filedirWarehouse):
     #         if fnmatch(fileImg, '*.jpg'):
     #           # print(file)
