@@ -13,7 +13,7 @@ class ImgIdenfy {
 
     // 二值化
     public static function binaryImage($im){
-        $imgArr = [];
+        $imgArr = [[]];
         for($x = 0;$x < self::$width;$x++) {
             for($y =0;$y < self::$height;$y++) {
                 if($x === 0 || $y === 0 || $x === self::$width - 1 || $y === self::$height - 1){
@@ -49,7 +49,7 @@ class ImgIdenfy {
             $unitImg = [[]];
             for ($j=$arrY[$i][0]; $j < $arrY[$i][1]; $j++) { 
                 for ($k=$arrX[$i][0]; $k < $arrX[$i][1]; $k++) { 
-                    $unitImg[$j][$k] = $img[$j][$k];
+                    $unitImg[$j-$arrY[$i][0]][$k-$arrX[$i][0]] = $img[$j][$k];
                 }
             }
             array_push($imgArr, $unitImg);
