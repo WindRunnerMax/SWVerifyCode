@@ -14,7 +14,7 @@ class GetImg(object):
         cvt = Convert()
         while True:
             print("第",count,"张")
-            req = requests.get("http://XXXXXXXXXXXXX/jsxsd/verifycode.servlet")
+            req = requests.get("http://XXXXXXXXXXXXXX/jsxsd/verifycode.servlet")
             with open("pv.jpg",'wb') as fb: 
                 fb.write(req.content)
             img = cvt.run(req.content)

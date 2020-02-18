@@ -21,7 +21,7 @@ MAX_CAPTCHA = 4
 char_set = number
 CHAR_SET_LEN = len(char_set)  #10
 model_path = "model/"
-URL_PATH = "http://XXXXXXXXXXXXX/jsxsd/"
+URL_PATH = "http://XXXXXXXXXXXXXXXXXXXXX/jsxsd/"
  
  
 X = tf.placeholder(tf.float32, [None, IMAGE_HEIGHT * IMAGE_WIDTH])

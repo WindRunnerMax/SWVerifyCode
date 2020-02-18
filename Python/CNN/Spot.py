@@ -89,7 +89,7 @@ def predict_captcha(captcha_image):
             i += 1
         return vec2text(vector)
  
- 
+
 if not os.path.exists(valid_path):
     print('Image does not exist, please check!, path:"{}"'.format(os.path.abspath(valid_pathb)))
     sys.exit()
