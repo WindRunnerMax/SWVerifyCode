@@ -173,7 +173,7 @@ def main():
     #       template = imgArr[i]
     #       tempResult=""
     #       matchingDegree=0.0
-    #       filedirWarehouse = '../../Warehouse/StrIntell/'
+    #       filedirWarehouse = 'Warehouse/StrIntell/'
     #       for fileImg in os.listdir(filedirWarehouse):
     #         if fnmatch(fileImg, '*.jpg'):
     #           # print(file)

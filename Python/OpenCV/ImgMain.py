@@ -35,13 +35,13 @@ def cutting_img(im,im_position,xoffset = 1,yoffset = 1):
 
 def main():
     cvt = Convert()
-    req = requests.get("http://xxxxxxxxxxxxxxxxxxxxxxxx/verifycode.servlet")   
+    req = requests.get("http://xxxxxxxxxxxxxxxxxxx/verifycode.servlet")   
     # 注意有些教务加装了所谓云防护，没有请求头会拦截，导致获取不了验证码图片，报错可以打印req.content看看
     img = cvt.run(req.content)
     cv2.imwrite("v.jpg",img) # 查看验证码
 
     #切割的位置
-    im_position = ([7, 7, 7, 7], [[5, 12], [15, 22], [25, 32], [33, 40]], [[4, 15], [4, 15], [4, 15], [4, 15]])
+    im_position = ([7, 7, 7, 7], [[5, 12], [15, 22], [25, 32], [34, 41]], [[4, 15], [4, 15], [4, 15], [4, 15]])
 
     cutting_img_num,imgArr = cutting_img(img,im_position,1,1)
 

@@ -126,5 +126,5 @@ with tf.Session() as sess:
  
         print("真实值: {0}  预测值: {1}".format(text_, predict_text),text_ == predict_text)
         if text_ == predict_text: acceptCount += 1;
-    print("测试集准群率",acceptCount,count,acceptCount/count)
+    print("测试集准确率",acceptCount,count,acceptCount/count)
 
