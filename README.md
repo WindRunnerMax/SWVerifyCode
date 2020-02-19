@@ -1,8 +1,9 @@
 # 强智教务系统验证码识别
 
 ```
-PHP 目录下提供切割对比方式识别
-Python 目录下提供CNN方式与OpenCV方式识别
+/Java 目录下提供切割对比方式识别
+/PHP  目录下提供切割对比方式识别
+/Python 目录下提供CNN方式与OpenCV方式识别
 ```
 
 ## EXAMPLE
@@ -15,8 +16,6 @@ Python 目录下提供CNN方式与OpenCV方式识别
 ## 识别率
 以供CNN作测试集使用的128张验证码为标本测试识别率
 
-Python CNN | Python CV | PHP CM
----|--- | ---
-96.87% | 100.00% | 93.75%
-
-
+|Python CNN | Python CV | PHP CM | Java CM |
+|---|---|---|---|
+|96.87% | 100.00% | 100.00% | 100.00% |
