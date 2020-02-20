@@ -11,6 +11,11 @@
 // @date         2020/02/18
 // ==/UserScript==
 
+var username = ""      //在引号内填写你的账号以达到自动填充的目的
+var password = ""      //在引号内填写你的密码以达到自动填充的目的
+var autologin = false  //修改为 true 则会自动登录
+//以上三行是配置
+
 var height = 22;
 var width = 62;
 var rgbThres = 150;
@@ -137,6 +142,9 @@ function main(){
     var result = matchCode(imgArrArr);
     console.log("识别为：",result);
     document.getElementById("RANDOMCODE").value = result;
+    document.getElementById("userAccount").value = username;
+    document.getElementById("userPassword").value = password;
+    if (autologin) document.getElementById("btnSubmit").click();
 }
 
 (function() {
