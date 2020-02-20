@@ -8,4 +8,4 @@
 
 
 **注意首先建立文件夹**  
-![image](https://raw.githubusercontent.com/WindrunnerMax/SWVerifyCode/master/Python/CNN/DirectoryStructure.png)
+![image](https://github.com/WindrunnerMax/SWVerifyCode/blob/master/SWExample/DirectoryStructure.png?raw=true)
