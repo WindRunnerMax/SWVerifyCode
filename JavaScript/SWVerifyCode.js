@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SWVerifyCode
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  try to take over the world!
 // @author       Czy
 // @match        http://jwgl.sdust.edu.cn/jsxsd/
@@ -11,10 +11,13 @@
 // @date         2020/02/18
 // ==/UserScript==
 
-var username = ""      //在引号内填写你的账号以达到自动填充的目的
-var password = ""      //在引号内填写你的密码以达到自动填充的目的
-var autologin = false  //修改为 true 则会自动登录
-//以上三行是配置
+/**
+ * 配置账号密码信息(选填)
+ */
+var username = ""; //账号
+var password = "" ; //密码
+var autologin = false; //自动登录
+
 
 var height = 22;
 var width = 62;
