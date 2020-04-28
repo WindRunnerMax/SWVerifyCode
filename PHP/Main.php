@@ -99,9 +99,10 @@ class ImgIdenfy {
         foreach ($imgArr as $img) {
             $maxMatch = 0;
             $tempRecord = "";
+            $s = ImgIdenfy::getString($img);
             foreach ($charMap as $key => $value) {
                 // similar_text(ImgIdenfy::getString($img),$value,$percent);
-                $percent = self::comparedText(ImgIdenfy::getString($img), $value);
+                $percent = self::comparedText($s , $value);
                 if($percent > $maxMatch){
                     $maxMatch = $percent;
                     $tempRecord = $key;
